@@ -57,26 +57,72 @@ Linux: g++ (GNU GCC)
 Windows: MinGW / MSVC / OpenWatcom / CLang
 
 Поддержка стандарта C++11+
-
-🚀 Сборка и запуск
 🐧 Linux
 🔨 Установка компилятора
 
 Ubuntu / Debian:
-
+```
 sudo apt update
 sudo apt install g++
-
-🔧 Сборка
+```
+### Сборка
+```
 g++ src/main.cpp -o iot
-
-▶ Запуск
+```
+### Запуск
+```
 ./iot
-
+```
 ---
+## Arch Linux
+### Установка компилятора (g++)
 
+В Arch всё просто — ставим пакет base-devel, в который входит GCC.
+```
+sudo pacman -Syu base-devel
+```
 
+Проверяем версию:
+```
+g++ --version
+```
+🔧 Сборка проекта
 
+Перейди в папку проекта:
+```
+cd IoT-Simulation
+```
+
+Компилируем:
+```
+g++ src/main.cpp -o iot
+```
+▶ Запуск
+```
+./iot
+```
+
+Если нужно дать разрешение:
+```
+chmod +x iot
+./iot
+```
+🔁 Дополнительно (для Arch)
+Обновить систему перед установкой:
+```
+sudo pacman -Syu
+```
+Установка альтернативных компиляторов:
+Clang
+```
+sudo pacman -S clang
+```
+
+Сборка с Clang:
+```
+clang++ src/main.cpp -o iot
+```
+---
 
 🪟 Windows
 🔨 Вариант 1: через MinGW
