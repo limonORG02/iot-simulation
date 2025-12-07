@@ -48,7 +48,7 @@
 
 ## Запуск и сборка
 
-🔷 1. Требования
+### 1. Требования
 
 Компилятор C++:
 
@@ -56,11 +56,12 @@ Linux: g++ (GNU GCC)
 
 Windows: MinGW / MSVC / OpenWatcom / CLang
 
-Поддержка стандарта C++11+
-🐧 Linux
-🔨 Установка компилятора
+Поддержка стандарта C++11
 
-Ubuntu / Debian:
+### Linux
+### Установка компилятора
+
+## Ubuntu / Debian:
 ```
 sudo apt update
 sudo apt install g++
@@ -82,22 +83,22 @@ g++ src/main.cpp -o iot
 sudo pacman -Syu base-devel
 ```
 
-Проверяем версию:
+## Проверяем версию:
 ```
 g++ --version
 ```
-🔧 Сборка проекта
+## Сборка проекта
 
 Перейди в папку проекта:
 ```
 cd IoT-Simulation
 ```
 
-Компилируем:
+## Компилируем:
 ```
 g++ src/main.cpp -o iot
 ```
-▶ Запуск
+## Запуск
 ```
 ./iot
 ```
@@ -107,36 +108,40 @@ g++ src/main.cpp -o iot
 chmod +x iot
 ./iot
 ```
-🔁 Дополнительно (для Arch)
+### Дополнительно (для Arch)
 Обновить систему перед установкой:
 ```
 sudo pacman -Syu
 ```
-Установка альтернативных компиляторов:
+## Установка альтернативных компиляторов:
 Clang
 ```
 sudo pacman -S clang
 ```
 
-Сборка с Clang:
+## Сборка с Clang:
 ```
 clang++ src/main.cpp -o iot
 ```
 ---
 
-🪟 Windows
-🔨 Вариант 1: через MinGW
+### Windows
+## Вариант 1: через MinGW
 
 Установить MinGW (g++)
 
 Добавить путь к bin в переменную PATH
 
-🔧 Сборка
+### Сборка
+```
 g++ src\main.cpp -o iot.exe
-
-▶ Запуск
+```
+## Запуск
+```
 iot.exe
-
-🔨 Вариант 2: через Visual Studio Developer Command Prompt
+```
+### Вариант 2: через Visual Studio Developer Command Prompt
+```
 cl src\main.cpp
 main.exe
+```
